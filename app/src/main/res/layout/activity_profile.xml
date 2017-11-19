@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context="com.example.jiteshnarula.bakbak.ProfileActivity">
+
+
+
+    <TextView
+        android:id="@+id/profileNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="Display Name"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="189dp" />
+
+    <ImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/defaultmaleimage" />
+
+    <TextView
+        android:id="@+id/profileStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profileNameTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:text="Current user Status"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/profileFriendsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileStatusTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:text="Total number of Friends"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/requestButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/declineButton"
+        android:layout_alignStart="@+id/declineButton"
+        android:layout_below="@+id/profileFriendsTextView"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorAccent"
+        android:text="Send Friend Request"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/declineButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/requestButton"
+        android:layout_centerHorizontal="true"
+        android:text="Decline Friend Request"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorWhite"
+        />
+</RelativeLayout>

@@ -1,0 +1,143 @@
+{
+  "project_info": {
+    "project_number": "813385001263",
+    "firebase_url": "https://bakbakapp-b39ea.firebaseio.com",
+    "project_id": "bakbakapp-b39ea",
+    "storage_bucket": "bakbakapp-b39ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813385001263:android:b6d118cec2da1334",
+        "android_client_info": {
+          "package_name": "com.example.jiteshnarula.bakbakapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813385001263-v9higq54nilp469oc1cc26fuvbt4cann.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jiteshnarula.bakbakapp",
+            "certificate_hash": "7fbd35885c5a2a3ee454605293f7868e818fe68d"
+          }
+        },
+        {
+          "client_id": "813385001263-fiv0d01rh9472q1br5gii8f590thon9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB6E-nonxoKQE2I4x7F6DNLQ-vqH7gQLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813385001263-fiv0d01rh9472q1br5gii8f590thon9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813385001263:android:bad0abb06661424e",
+        "android_client_info": {
+          "package_name": "com.example.jiteshnarula.bakbakchatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813385001263-t01lnpfn2q7nctukcddm686t74rbala5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jiteshnarula.bakbakchatapp",
+            "certificate_hash": "7fbd35885c5a2a3ee454605293f7868e818fe68d"
+          }
+        },
+        {
+          "client_id": "813385001263-fiv0d01rh9472q1br5gii8f590thon9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB6E-nonxoKQE2I4x7F6DNLQ-vqH7gQLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813385001263-fiv0d01rh9472q1br5gii8f590thon9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813385001263:android:18fd61aeef536d00",
+        "android_client_info": {
+          "package_name": "com.example.jiteshnarula.bakbak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813385001263-34alj8vn93d5hnt4esr01v5agbjvcrpc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jiteshnarula.bakbak",
+            "certificate_hash": "7fbd35885c5a2a3ee454605293f7868e818fe68d"
+          }
+        },
+        {
+          "client_id": "813385001263-fiv0d01rh9472q1br5gii8f590thon9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB6E-nonxoKQE2I4x7F6DNLQ-vqH7gQLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813385001263-fiv0d01rh9472q1br5gii8f590thon9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
