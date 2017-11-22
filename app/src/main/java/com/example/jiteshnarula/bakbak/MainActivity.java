@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
-        Toast.makeText(MainActivity.this,"this is Main Activity",Toast.LENGTH_LONG).show();
+       // Toast.makeText(MainActivity.this,"this is Main Activity",Toast.LENGTH_LONG).show();
 
         //Adding Fragments in Main Activity
         viewPager = (ViewPager) findViewById(R.id.container);

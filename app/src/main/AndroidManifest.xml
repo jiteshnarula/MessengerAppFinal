@@ -31,7 +31,8 @@
         <activity
             android:name=".RegisterActivity"
             android:parentActivityName=".Email_Verification" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity"
+            android:parentActivityName=".Email_Verification"/>
         <activity android:name=".AccountSettingsActivity" />
         <activity
             android:name=".StatusActivity"

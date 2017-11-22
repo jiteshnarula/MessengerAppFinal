@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:id="@+id/messageRelLay">
-    
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="56dp"
         android:layout_height="56dp"

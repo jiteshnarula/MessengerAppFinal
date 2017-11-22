@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#4527a0</color>
     <color name="colorAccent">#f44336</color>
     <color name="colorWhite">#ffffff</color>
+    <color name="profile_background">#848080</color>
+    <color name="yellow">#004b40</color>
+    <color name="black">#000000</color>
 </resources>

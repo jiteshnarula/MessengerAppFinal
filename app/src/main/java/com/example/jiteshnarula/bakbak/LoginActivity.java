@@ -107,8 +107,7 @@ Toast.makeText(LoginActivity.this,"Token ID can't saved",Toast.LENGTH_SHORT);
 
                 }else{
                     progressDialog.hide();
-                    Toast.makeText(LoginActivity.this,"Please Check your credentials abnd try agian",Toast.LENGTH_LONG).show();
-
+                    Toast.makeText(LoginActivity.this,"Please Check your credentials and try agian!",Toast.LENGTH_LONG).show();
                 }
             }
         });

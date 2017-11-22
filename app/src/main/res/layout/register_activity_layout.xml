@@ -12,7 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="150dp">
+        android:layout_marginTop="160dp">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
@@ -27,11 +27,14 @@
         android:layout_below="@+id/regName"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="-5dp">
+        android:layout_marginTop="10dp">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/regEmail"
+            android:layout_alignLeft="@+id/regEmail"
+            android:layout_alignStart="@+id/regEmail"
             android:hint="@string/email"
             android:inputType="textEmailAddress" />
     </android.support.design.widget.TextInputLayout>
@@ -42,7 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/regEmail"
         android:layout_alignStart="@+id/regEmail"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/regEmail"
+        android:layout_marginTop="10dp">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"

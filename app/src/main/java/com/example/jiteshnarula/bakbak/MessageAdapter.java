@@ -1,6 +1,8 @@
 package com.example.jiteshnarula.bakbak;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Message;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -36,33 +38,40 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     public class MessageViewHolder extends RecyclerView.ViewHolder{
         public TextView messageText;
         public CircleImageView profileImage;
+        public TextView userName;
 
         public MessageViewHolder(View view){
             super(view);
 
             messageText =(TextView)view.findViewById(R.id.messageTextLayout);
-            profileImage = (CircleImageView)view.findViewById(R.id.messageimageView);
+
+            userName  = (TextView) view.findViewById(R.id.userName);
             mAuth = FirebaseAuth.getInstance();
 
 
         }
     }
 
+    @SuppressLint("ResourceType")
     @Override
     public void onBindViewHolder(MessageViewHolder holder, int position) {
         String current_user_id = mAuth.getCurrentUser().getUid();
+
         Messages c  = mMessageList.get(position);
         String  from_user = c.getFrom();
+
         if( from_user.equals(current_user_id))
         {
-            holder.messageText.setBackgroundColor(Color.WHITE);
-            holder.messageText.setTextColor(Color.BLACK);
+            holder.messageText.setBackgroundResource(R.drawable.mymessage);
+            holder.messageText.setTextColor(Color.WHITE);
         }else
         {
-holder.messageText.setBackgroundResource(R.drawable.message_text_background);
-holder.messageText.setTextColor(Color.WHITE);
+            holder.messageText.setBackgroundResource(R.drawable.message_text_background);
+
+            holder.messageText.setTextColor(Color.WHITE);
         }
         holder.messageText.setText(c.getMessage());
+
     }
 
     @Override

@@ -26,7 +26,7 @@ public class Email_Verification extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     setContentView(R.layout.email_verification_layout);
-    Toast.makeText(Email_Verification.this,"This is email activity",Toast.LENGTH_LONG).show();
+   // Toast.makeText(Email_Verification.this,"This is email activity",Toast.LENGTH_LONG).show();
 newAccount = (Button) findViewById(R.id.newAccountButton);
         existingAccountButton = (Button) findViewById(R.id.existingAccountButton);
 

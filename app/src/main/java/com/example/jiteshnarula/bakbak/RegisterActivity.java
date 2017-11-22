@@ -26,23 +26,25 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by jiteshnarula on 10-11-2017.
  */
 
 public class RegisterActivity extends AppCompatActivity {
-    TextInputLayout regName,regEmail,regPassword;
-     Button newAccountButton;
-      FirebaseAuth mAuth;
-      private DatabaseReference database;
-      //for token
+    TextInputLayout regName, regEmail, regPassword;
+    Button newAccountButton;
+    FirebaseAuth mAuth;
+    private DatabaseReference database;
+    //for token
     private DatabaseReference userDatabase;
 
-      private Toolbar registerPageToolBar;
-      private Context context =  RegisterActivity.this;
+    private Toolbar registerPageToolBar;
+    private Context context = RegisterActivity.this;
 
-      //Progress Bar
+    //Progress Bar
     private ProgressDialog progressDialog;
 
     @Override
@@ -50,11 +52,11 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_activity_layout);
 
-         mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         regName = (TextInputLayout) findViewById(R.id.regName);
         regEmail = (TextInputLayout) findViewById(R.id.regEmail);
-        regPassword  =  (TextInputLayout)findViewById(R.id.regPassword);
+        regPassword = (TextInputLayout) findViewById(R.id.regPassword);
         newAccountButton = (Button) findViewById(R.id.newAccountButton);
         registerPageToolBar = (Toolbar) findViewById(R.id.registerpageToolBar);
 
@@ -66,9 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
         setSupportActionBar(registerPageToolBar);
         getSupportActionBar().setTitle("Create Account");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Toast.makeText(RegisterActivity.this,"This is Register activity",Toast.LENGTH_LONG).show();
-
-
+       // Toast.makeText(RegisterActivity.this, "This is Register activity", Toast.LENGTH_LONG).show();
 
 
         newAccountButton.setOnClickListener(new View.OnClickListener() {
@@ -77,21 +77,44 @@ public class RegisterActivity extends AppCompatActivity {
 
                 String enteredName = regName.getEditText().getText().toString();
                 String enteredEmail = regEmail.getEditText().getText().toString();
-                String enteredPassword =regPassword.getEditText().getText().toString();
+                String enteredPassword = regPassword.getEditText().getText().toString();
 
-                if(!(TextUtils.isEmpty(enteredName) && !(TextUtils.isEmpty(enteredEmail)) && !(TextUtils.isEmpty(enteredPassword)))){
-                    progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-                    progressDialog.setTitle("Please wait");
-                    progressDialog.setMessage("While we are creating your account...");
-                    progressDialog.setCancelable(false); // disable dismiss by tapping outside of the dialog
-                    progressDialog.show();
-                    progressDialog.setCanceledOnTouchOutside(false);
 
-                    registerUser(enteredName,enteredEmail,enteredPassword);
 
-                }
+                    if (!validateEmail(enteredEmail)) {
+                        regEmail.setError("Invalid Email");
+                        regEmail.requestFocus();
+                    } else if (!validatePassword(enteredPassword)) {
+                        regPassword.setError("Password Must be greater than 6 characters");
+                        regPassword.requestFocus();
+                    } else {
+                        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                        progressDialog.setTitle("Please wait");
+                        progressDialog.setMessage("While we are creating your account...");
+                        progressDialog.setCancelable(false); // disable dismiss by tapping outside of the dialog
+                        progressDialog.show();
+                        progressDialog.setCanceledOnTouchOutside(false);
+
+                        registerUser(enteredName, enteredEmail, enteredPassword);
+                    }
+
             }
         });
+    }
+
+    private boolean validatePassword(String password) {
+        if (password != null && password.length() > 9)
+            return true;
+    else
+        return false;
+
+}
+    private boolean validateEmail(String enteredEmail) {
+String emailPattern ="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";
+        Pattern pattern = Pattern.compile(emailPattern);
+        Matcher matcher = pattern.matcher(enteredEmail);
+
+        return matcher.matches();
     }
 
     private void registerUser(final String enteredName, String enteredEmail, String enteredPassword) {
