@@ -53,6 +53,5 @@ public class BakBak extends Application{
                 }
             });
         }
-
     }
 }
